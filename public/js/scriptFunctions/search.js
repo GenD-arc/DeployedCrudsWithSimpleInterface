@@ -27,8 +27,7 @@ export const searchAccount = async () => {
           `;
           tableBody.innerHTML += row;
         });
-      alert("Search Results: " + JSON.stringify(data));
+      alert("A user has been found");
 
+      document.getElementById("searchInput").value = "";
     }
-
-
