@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3001";
+const baseUrl = "http://simplecrudstable.onrender.com/";
 
 export const deleteAccount = async () => {
       const email = document.getElementById("deleteEmail").value;
@@ -11,4 +11,5 @@ export const deleteAccount = async () => {
         viewAccounts();
      window.location.reload();
      alert("Deleted: " + JSON.stringify(data));
+
     }
