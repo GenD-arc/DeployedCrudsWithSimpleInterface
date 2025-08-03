@@ -26,6 +26,11 @@ export const updateAccount = async () => {
   alert("Updated: " + JSON.stringify(data));
   viewAccounts();
 
+document.getElementById("updateEmail").value = "";
+document.getElementById("updateNewEmail").value = "";
+document.getElementById("updatePassword").value = "";
+document.getElementById("updateRole").value = "";
 }
+
 
 
