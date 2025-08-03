@@ -10,7 +10,8 @@ const updateUser = (req, res) => {
 
     if (!password && !role && !newEmail) {
     return res.status(400).json({ msg: "Please provide password, role, or new email to update." });
-
+    }
+  
   let query = "UPDATE accounts SET ";
   const updates = [];
   const params = [];
@@ -50,3 +51,4 @@ const updateUser = (req, res) => {
 
 
 module.exports = { updateUser };
+
