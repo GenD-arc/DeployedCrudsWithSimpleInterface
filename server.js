@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3001;
 const moment = require('moment');
+const cors = require('cors');
 
 const endpointRead = require('./routes/endpointRead');
 const endpointCreate = require('./routes/endpointCreate');
@@ -16,6 +17,8 @@ const logger = (req, res, next) => {
 
 app.use(logger);
 
+app.use(cors());
+
 app.use(express.static('public'));
 
 app.use(express.json());
@@ -29,4 +32,5 @@ app.use('/deleteUsers', endpointDelete);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
+
 });
