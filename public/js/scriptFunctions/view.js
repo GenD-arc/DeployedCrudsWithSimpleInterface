@@ -1,4 +1,4 @@
-const baseUrl = "http://simplecrudstable.onrender.com";
+const baseUrl = "https://simplecrudstable.onrender.com";
 
 export const viewAccounts = async () => {
       const res = await fetch(`${baseUrl}/viewUsers`);
@@ -21,4 +21,5 @@ export const viewAccounts = async () => {
 
 
     window.onload = viewAccounts;
+
 
