@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3001";
+const baseUrl = "http://simplecrudstable.onrender.com/";
 
 export const searchAccount = async () => {
       const email = document.getElementById("searchInput").value;
@@ -28,4 +28,5 @@ export const searchAccount = async () => {
           tableBody.innerHTML += row;
         });
       alert("Search Results: " + JSON.stringify(data));
+
     }
