@@ -14,8 +14,12 @@ export const createAccount = async () => {
       const data = await res.json();
       viewAccounts();
       window.location.reload();
-      alert("Created: " + JSON.stringify(data));
+      alert("New user successfully added");
 
+document.getElementById("createEmail").value = "";
+document.getElementById("createPassword").value = "";
+document.getElementById("createRole").value = "";
     }
+
 
 
