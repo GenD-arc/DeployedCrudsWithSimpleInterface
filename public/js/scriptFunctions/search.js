@@ -1,4 +1,4 @@
-const baseUrl = "http://simplecrudstable.onrender.com/";
+const baseUrl = "http://simplecrudstable.onrender.com";
 
 export const searchAccount = async () => {
       const email = document.getElementById("searchInput").value;
@@ -30,3 +30,4 @@ export const searchAccount = async () => {
       alert("Search Results: " + JSON.stringify(data));
 
     }
+
