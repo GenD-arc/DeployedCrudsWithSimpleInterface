@@ -1,4 +1,4 @@
-const baseUrl = "http://simplecrudstable.onrender.com";
+const baseUrl = "https://simplecrudstable.onrender.com";
 
 export const createAccount = async () => {
       const email = document.getElementById("createEmail").value;
@@ -17,4 +17,5 @@ export const createAccount = async () => {
       alert("Created: " + JSON.stringify(data));
 
     }
+
 
