@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3001";
+const baseUrl = "http://simplecrudstable.onrender.com/";
 
 export const updateAccount = async () => {
   const email = document.getElementById("updateEmail").value;
@@ -25,4 +25,5 @@ export const updateAccount = async () => {
   const data = await res.json();
   alert("Updated: " + JSON.stringify(data));
   viewAccounts();
+
 }
