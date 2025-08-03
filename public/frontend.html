@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accounts CRUD Interface</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-10">
+  <div class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+    <h1 class="text-3xl font-bold mb-6 text-center">Accounts CRUD</h1>
+
+     <!-- View -->
+    <div class="mb-2 relative">
+  <h2 class="text-xl font-semibold mb-2">All Accounts</h2>
+  <div class="absolute right-0 top-0 flex gap-2">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search by email..."
+      class="border border-gray-300 rounded px-3 py-1 w-64 focus:outline-none focus:ring-2 focus:ring-blue-400"
+    />
+    <button onclick="searchAccount()" class="bg-blue-500 text-white px-4 py-2 rounded">
+      Search
+    </button>
+    </div>
+      <table class="w-full table-auto border border-gray-300">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="border px-4 py-2">Email</th>
+            <th class="border px-4 py-2">Password</th>
+            <th class="border px-4 py-2">Role</th>
+          </tr>
+        </thead>
+        <tbody id="accountsTableBody" class="text-center">
+           </tbody>
+      </table>
+    </div>
+
+    <!-- Create -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">Create Account (POST)</h2>
+      <input type="email" id="createEmail" placeholder="Email" class="border p-2 w-full mb-2">
+      <input type="password" id="createPassword" placeholder="Password" class="border p-2 w-full mb-2">
+      <input type="text" id="createRole" placeholder="Role (e.g. admin, user)" class="border p-2 w-full mb-2">
+      <button onclick="createAccount()" class="bg-green-500 text-white px-4 py-2 rounded">Create</button>
+    </div>
+
+    <!-- Update -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">Update Account Details (PUT)</h2>
+      <input type="email" id="updateEmail" placeholder="Email of Account to Update" class="border p-2 w-full mb-2">
+      <input type="new email" id="updateNewEmail" placeholder="New Email (optional)" class="border p-2 w-full mb-2">
+      <input type="password" id="updatePassword" placeholder="New Password (optional)" class="border p-2 w-full mb-2">
+      <input type="text" id="updateRole" placeholder="New Role" class="border p-2 w-full mb-2">
+      <button onclick="updateAccount()" class="bg-yellow-500 text-white px-4 py-2 rounded">Update</button>
+    </div>
+
+    <!-- Delete -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">Delete Account (DELETE)</h2>
+      <input type="email" id="deleteEmail" placeholder="Email to Delete" class="border p-2 w-full mb-2">
+      <button onclick="deleteAccount()" class="bg-red-500 text-white px-4 py-2 rounded">Delete</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
