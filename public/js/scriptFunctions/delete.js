@@ -10,8 +10,10 @@ export const deleteAccount = async () => {
       const data = await res.json();
         viewAccounts();
      window.location.reload();
-     alert("Deleted: " + JSON.stringify(data));
+     alert("Successfully Deleted");
 
+      document.getElementById("deleteEmail").value = "";
     }
+
 
 
