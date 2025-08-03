@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3001";
+const baseUrl = "http://simplecrudstable.onrender.com/";
 
 export const viewAccounts = async () => {
       const res = await fetch(`${baseUrl}/viewUsers`);
@@ -18,5 +18,6 @@ export const viewAccounts = async () => {
         tableBody.innerHTML += row;
       });
     }
+
 
     window.onload = viewAccounts;
